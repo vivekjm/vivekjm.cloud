@@ -3,7 +3,7 @@ module.exports = {
   env: {
     dir: "/",
   },
-  output: "export",
+
   images: {
     remotePatterns: [
       {
