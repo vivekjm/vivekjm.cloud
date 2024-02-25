@@ -1,0 +1,143 @@
+[
+
+	{
+		"project": "Credzy",
+		"url": "https://github.com/atlamors/portfolio",
+		"repo": "Private",
+		"date":"12/12/2022",
+		"descriptionTitle": "",
+		"description": "Comprehensive credit management mobile application. ",
+		"imageOptions": [
+			{ "key": "size", 		"value": "large" }
+		],
+		"images": [
+			{ "key": "portfolio", "hover": "left", "h": "797", "w": "556",  "url": "/img/credzy.webp" }
+		],
+		"stack": [
+			{ "key": "nextjs", 		"name": "Next.js", 		"type": "devicon" },
+			{ "key": "react", 		"name": "React", 		"type": "devicon" },
+			{ "key": "nodejs", 		"name": "Node.js", 		"type": "devicon" }
+			
+		]
+	},{
+		"project": "Build Connect",
+		"url": "https://github.com/atlamors/portfolio",
+		"repo": "Private",
+		"date":"12/12/2022",
+		"descriptionTitle": "{Description Title}",
+		"description": "Description",
+		"imageOptions": [
+			{ "key": "size", 		"value": "large" }
+		],
+		"images": [
+			{ "key": "portfolio", "hover": "left", "h": "797", "w": "556",  "url": "/img/portfolio-mock_single.png" }
+		],
+		"stack": [
+			{ "key": "nextjs", 		"name": "Next.js", 		"type": "devicon" },
+			{ "key": "react", 		"name": "React", 		"type": "devicon" },
+			{ "key": "nodejs", 		"name": "Node.js", 		"type": "devicon" }
+			
+		]
+	},
+	{
+		"project": "Happilee",
+		"url": "https://github.com/atlamors/portfolio",
+		"repo": "Private",
+		"date":"12/12/2022",
+		"descriptionTitle": "{Description Title}",
+		"description": "Description",
+		"imageOptions": [
+			{ "key": "size", 		"value": "large" }
+		],
+		"images": [
+			{ "key": "portfolio", "hover": "left", "h": "797", "w": "556",  "url": "/img/portfolio-mock_single.png" }
+		],
+		"stack": [
+			{ "key": "nextjs", 		"name": "Next.js", 		"type": "devicon" },
+			{ "key": "react", 		"name": "React", 		"type": "devicon" },
+			{ "key": "nodejs", 		"name": "Node.js", 		"type": "devicon" }
+			
+		]
+	},
+	{
+		"project": "City Weekly",
+		"url": "https://github.com/atlamors/portfolio",
+		"repo": "Private",
+		"date":"12/12/2022",
+		"descriptionTitle": "{Description Title}",
+		"description": "Description",
+		"imageOptions": [
+			{ "key": "size", 		"value": "large" }
+		],
+		"images": [
+			{ "key": "portfolio", "hover": "left", "h": "797", "w": "556",  "url": "/img/portfolio-mock_single.png" }
+		],
+		"stack": [
+			{ "key": "nextjs", 		"name": "Next.js", 		"type": "devicon" },
+			{ "key": "react", 		"name": "React", 		"type": "devicon" },
+			{ "key": "nodejs", 		"name": "Node.js", 		"type": "devicon" }
+			
+		]
+	},
+	{
+		"project": "Head Coach",
+		"url": "https://github.com/atlamors/portfolio",
+		"repo": "Private",
+		"date":"12/12/2022",
+		"descriptionTitle": "{Description Title}",
+		"description": "Description",
+		"imageOptions": [
+			{ "key": "size", 		"value": "large" }
+		],
+		"images": [
+			{ "key": "portfolio", "hover": "left", "h": "797", "w": "556",  "url": "/img/portfolio-mock_single.png" }
+		],
+		"stack": [
+			{ "key": "nextjs", 		"name": "Next.js", 		"type": "devicon" },
+			{ "key": "react", 		"name": "React", 		"type": "devicon" },
+			{ "key": "nodejs", 		"name": "Node.js", 		"type": "devicon" }
+			
+		]
+	},
+	{
+		"project": "Vibeonix",
+		"url": "https://github.com/atlamors/portfolio",
+		"repo": "Private",
+		"date":"12/12/2022",
+		"descriptionTitle": "{Description Title}",
+		"description": "Description",
+		"imageOptions": [
+			{ "key": "size", 		"value": "large" }
+		],
+		"images": [
+			{ "key": "portfolio", "hover": "left", "h": "797", "w": "556",  "url": "/img/portfolio-mock_single.png" }
+		],
+		"stack": [
+			{ "key": "nextjs", 		"name": "Next.js", 		"type": "devicon" },
+			{ "key": "react", 		"name": "React", 		"type": "devicon" },
+			{ "key": "nodejs", 		"name": "Node.js", 		"type": "devicon" }
+			
+		]
+	},
+	{
+		"project": "Urban Chat",
+		"url": "https://github.com/atlamors/portfolio",
+		"repo": "Private",
+		"date":"12/12/2022",
+		"descriptionTitle": "{Description Title}",
+		"description": "Description",
+		"imageOptions": [
+			{ "key": "size", 		"value": "large" }
+		],
+		"images": [
+			{ "key": "portfolio", "hover": "left", "h": "797", "w": "556",  "url": "/img/portfolio-mock_single.png" }
+		],
+		"stack": [
+			{ "key": "nextjs", 		"name": "Next.js", 		"type": "devicon" },
+			{ "key": "react", 		"name": "React", 		"type": "devicon" },
+			{ "key": "nodejs", 		"name": "Node.js", 		"type": "devicon" }
+			
+		]
+		
+	}
+]

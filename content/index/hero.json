@@ -1,0 +1,32 @@
+{
+	"intro": {
+		"start": "const Vivek = ( name, passion ) =>",
+		"end": "Hello, my name is",
+		"speed": 60,
+		"deletionSpeed": 80,
+		"wrapper": "h2",
+		"startDelay": 1000,
+		"deleteDelay": 3000,
+		"restartDelay": 12000
+	},
+
+	"header": {
+		"name": "Vivek Jm.",
+		"usp": "I specialize in crafting and developing  mobile experiences."
+	},
+
+	"paragraph": "As a mobile app developer and tech writer, I thrive on the dynamic interplay between code and narrative, sculpting intuitive experiences and elucidating complex ideas with precision and flair",
+
+	"buttons": {
+		"primary": {
+			"title": "Contact Me",
+			"url": "",
+			"leaveSite": false
+		},
+		"secondary": {
+			"title": "LinkedIn",
+			"url": "",
+			"leaveSite": "true"
+		}
+	}
+}
