@@ -11,7 +11,7 @@ import settings 	from '../../content/_settings.json'
 export default function Articles({ mediumArticles }) {
 	return (
 		<>
-			<Color colors={colors} />
+			{/* <Color colors={colors} /> */}
 			<Recent mediumArticles={mediumArticles}/>
 		</>
 	)
@@ -37,3 +37,4 @@ export async function getServerSideProps({ res }) {
 
 	return { props: { mediumArticles } }
 }
+

@@ -30,7 +30,7 @@ export default function About() {
 				<SectionTitle
 					title="About Me"
 					preTitle="Synopsis"
-					subTitle="With a diverse skill set that includes UX design, UI design, full stack development, operational architecture, systems design, photography, and branding, I am a well-rounded digital professional."
+					subTitle="With a diverse skill set encompassing mobile application development, web development, and proficiency in technical writing, I am a well-rounded digital professional communicating complex technical concepts and implementing robust software solutions."
 				/>
 				<section className={about.content}>
 					<div className={about.image}>
@@ -38,13 +38,16 @@ export default function About() {
 						{/* <Image src="/img/family-photo.jpg" width={600} height={800}/> */}
 					</div>
 					<div className={about.copy} >
-						<CopyBlock 
-							title="Softskills that pay the bills"
+						<BadgesBlock 
+							title="Technologies I love to build with" 
+							copy="I deeply enjoy solving problems through code. From the front end all the way to the back end and the APIs in-between. No project is too challenging for me."
+							list={tech} 
+							block="tech"
+							fullContainer="fullContainer" 
+							icon="laptop-code"
 							containerClass={about.container}
-							iconClass={about.icon}
-							icon={[ 'fat', 'ear-listen' ]}
-							copy="In addition to my design and technical expertise—I also have strong leadership, time management, and multitasking skills—honed through my experience as a business owner / managing partner, husband, and father of two. Outside of work, I enjoy staying active through sports such as hockey and snowboarding. I am confident in my ability to bring passion and value to any project."
-						/>
+							//headerIcon={about.icon} 
+						/>	
 						<BadgesBlock 
 							title="Reasearch and planning" 
 							containerClass={about.container}
@@ -54,7 +57,7 @@ export default function About() {
 							icon="fingerprint"
 							copy="One of my favorite aspects of creating is planning the architecture of a project. From Design Systems to Brand Strategy—I enjoy working with the many touch points of user experience."
 							//invertedColor="invertedColor"
-							headerIcon={`${about.icon}`}
+							//headerIcon={`${about.icon}`}
 						/>
 					</div>
 				</section>	
@@ -64,10 +67,29 @@ export default function About() {
 }
 
 const methods 	= [
-	{ key: 'planet-moon', 		name: 'User Research', 		type: 'fad' },
-	{ key: 'qrcode', 			name: 'Digital Strategy', 	type: 'fad' },
-	{ key: 'window', 			name: 'Design Systems', 	type: 'fad' },
-	{ key: 'cubes', 			name: 'Product Strategy', 	type: 'far' },
-	{ key: 'layer-plus', 		name: 'Brand Strategy', 	type: 'fad' },
-	{ key: 'solar-system', 		name: 'Operations', 		type: 'fad' },
+	{ key: 'planet-moon', 		name: 'User Research', 		type: 'fab' },
+	{ key: 'qrcode', 			name: 'Digital Strategy', 	type: 'fab' },
+	{ key: 'window', 			name: 'Design Systems', 	type: 'fab' },
+	{ key: 'cubes', 			name: 'Product Strategy', 	type: 'fab' },
+	{ key: 'layer-plus', 		name: 'Brand Strategy', 	type: 'fab' },
+	{ key: 'maya', 		name: 'Operations', 		type: 'devicon' },
+]
+
+
+const tech	= [
+	{ key: 'javascript', 	name: 'JavaScript', 		type: 'devicon' },
+	{ key: 'nodejs', 		name: 'NodeJS', 			type: 'devicon' },
+	{ key: 'react', 		name: 'React', 				type: 'devicon' },
+	{ key: 'nextjs', 		name: 'NextJS', 			type: 'devicon' },
+	{ key: 'jquery', 		name: 'jQuery', 			type: 'devicon' },
+	{ key: 'php', 			name: 'PHP', 				type: 'devicon' },
+	{ key: 'wordpress', 	name: 'WordPress', 			type: 'devicon' },
+	{ key: 'woocommerce', 	name: 'WooCommerce', 		type: 'devicon' },
+	{ key: "google",		name: "GA4/GTM", 			type: "devicon" },
+	{ key: 'html5', 		name: 'HTML5', 				type: 'devicon' },
+	{ key: 'css3', 			name: 'CSS3', 				type: 'devicon' },
+	{ key: 'sass', 			name: 'SASS', 				type: 'devicon' },
+	{ key: 'git', 			name: 'Git', 				type: 'devicon' },
+	{ key: 'mysql', 		name: 'MySQL', 				type: 'devicon' },
+	{ key: 'mongodb', 		name: 'MongoDB', 			type: 'devicon' },
 ]

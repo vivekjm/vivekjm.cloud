@@ -72,7 +72,13 @@ export default function Hero() {
 							onClick={ ()=> window.open("https://www.linkedin.com/in/--andrewnelson/", "_blank") } >
 						{content.buttons.secondary.title}
 					</button>
+					<button className={`button ${button.secondary} leaveSite`}
+							onClick={ ()=> window.open("https://www.linkedin.com/in/--andrewnelson/", "_blank") } >
+						{content.buttons.secondary.title}
+					</button>
+					
 				</section>
+				
 			</Container>
 			<HeroBg theme="bg-color-1" />
 		</Section>

@@ -6,11 +6,11 @@ import Career from "../components/sections/index/career";
 import FeaturedProjects from "../components/sections/projects/featured";
 import HomeProjects from "../components/sections/projects/home_project";
 import Color from "../components/utils/page.colors.util";
-
+import Recent 		from '../components/sections/articles/recent'
 import colors from "../content/index/_colors.json";
-
+import Articles 		from '../pages/articles/index'
 import settings from "../content/_settings.json";
-export default function HomePage({ user, repos }) {
+export default function HomePage({ user, repos ,mediumArticles}) {
   return (
     <>
       <Color colors={colors} />
@@ -19,19 +19,22 @@ export default function HomePage({ user, repos }) {
       {/* <FeaturedProjects /> */}
       <HomeProjects user={user} repos={repos} />
       <About />
-      <Technical />
-      {/* <Career /> */}
+      {/* <Technical /> */}
+    <Recent mediumArticles={mediumArticles}/>
     </>
   );
 }
 
-// This gets called on every request
+
+
+
 export async function getServerSideProps({ res }) {
   res.setHeader(
     "Cache-Control",
     "public, s-maxage=600, stale-while-revalidate=59"
   );
 
+  // Fetch GitHub user and repos
   const [gitUserRes, gitReposRes] = await Promise.all([
     fetch(`https://api.github.com/users/${settings.username.github}`),
     fetch(`https://api.github.com/users/${settings.username.github}/repos`),
@@ -42,18 +45,23 @@ export async function getServerSideProps({ res }) {
     gitReposRes.json(),
   ]);
 
-  if (user.login) {
-    user = [user].map(({ login, name, avatar_url, html_url }) => ({
-      login,
-      name,
-      avatar_url,
-      html_url,
-    }));
-  }
+  // Fetch Medium articles
+  const mediumRSS = await fetch(`https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/${settings.username.medium}`);
+  const mediumArticles = await mediumRSS.json();
 
-  if (repos.length) {
-    repos = repos.map(
-      ({
+  // Process GitHub user
+  if (user.login) {
+    user = [user].map(({  name,
+        fork,
+        description,
+        forks_count,
+        html_url,
+        language,
+        watchers,
+        default_branch,
+        homepage,
+        pushed_at,
+        topics, }) => ({
         name,
         fork,
         description,
@@ -65,36 +73,20 @@ export async function getServerSideProps({ res }) {
         homepage,
         pushed_at,
         topics,
-      }) => {
-        const timestamp = Math.floor(new Date(pushed_at) / 1000);
-        return {
-          name,
-          fork,
-          description,
-          forks_count,
-          html_url,
-          language,
-          watchers,
-          default_branch,
-          homepage,
-          timestamp,
-          topics,
-          pushed_at,
-        };
-      }
-    );
-
-    repos.sort((a, b) => b.timestamp - a.timestamp);
-
-    repos = repos.filter((e, i) => {
-      if (i < 8 && !e.topics.includes("github-config")) return e;
-      return false;
-    });
+    }));
   }
 
-  if (!repos || !user) {
+  // Process GitHub repos
+  if (repos.length) {
+    repos = repos.map(/* Your existing mapping logic here */).filter(/* Your existing filtering logic here */);
+    repos.sort((a, b) => b.timestamp - a.timestamp);
+  }
+
+  // Validate fetched data
+  if (!repos || !user || !mediumArticles) {
     return { notFound: true };
   }
 
-  return { props: { repos, user } };
+  // Return all props
+  return { props: { repos, user, mediumArticles } };
 }
