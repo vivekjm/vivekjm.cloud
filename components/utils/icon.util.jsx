@@ -7,7 +7,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { fab } from '@fortawesome/free-brands-svg-icons'
 
 // Load icons into
-library.add(fat, fal, fas, fad, far, fab)
+library.add(fab)
 
 /**
  * Icon factory utility.
