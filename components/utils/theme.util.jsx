@@ -36,7 +36,7 @@ export default function SetTheme() {
 		const themeLocalStorage = localStorage.getItem('theme')
 		const themeSystem       = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
 
-		return ( themeLocalStorage ?? themeSystem )
+		return ( 'light')
 	}
 
 	useEffect( () => {
@@ -109,7 +109,7 @@ export default function SetTheme() {
 				document.querySelector(':root').dataset.theme = themeLocalStorage ?? themeSystem
 				`}
 			</Script>
-			<button key="themeToggle" onClick={toggleTheme} data-theme={theme} className={css.toggle}>{buttonIcon(theme)}</button>
+			{/* <button key="themeToggle" onClick={toggleTheme} data-theme={theme} className={css.toggle}>{buttonIcon(theme)}</button> */}
 		</>
 	)
 }
