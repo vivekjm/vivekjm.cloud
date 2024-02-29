@@ -10,17 +10,9 @@ export default function SetTheme() {
 	const router = useRouter()
 
 	const [ route, wasRoute ] = useState()
-	const [ theme, setTheme ] = useState()
+	const [ theme, setTheme ] = useState('light')
 
-	const toggleTheme = () => {
-		if ( theme == 'light') {
-			setTheme('dark')
-		} else if ( theme == 'dark' ) {
-			setTheme('unicorn')
-		} else if ( theme == 'unicorn' )  {
-			setTheme('light')
-		}
-	}
+
 
 	const buttonIcon = (theme) => {
 		if ( theme == 'light') {
@@ -32,30 +24,30 @@ export default function SetTheme() {
 		}
 	}
 
-	const defaultTheme = () => {
-		const themeLocalStorage = localStorage.getItem('theme')
-		const themeSystem       = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
+	// const defaultTheme = () => {
+	// 	const themeLocalStorage = localStorage.getItem('theme')
+	// 	const themeSystem       = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
 
-		return ( 'light')
-	}
+	// 	return ( 'light')
+	// }
 
-	useEffect( () => {
+	// useEffect( () => {
 
-		if ( ! theme ) return setTheme( defaultTheme() )
+	// 	if ( ! theme ) return setTheme( defaultTheme() )
 
-		document.querySelector(':root').dataset.theme = ( theme )
-		localStorage.setItem( 'theme', ( theme ) )
+	// 	document.querySelector(':root').dataset.theme = ( theme )
+	// 	localStorage.setItem( 'theme', ( theme ) )
 		
-		const useSetTheme = (e) => { setTheme( e.matches ? 'dark' : 'light' ) }
+	// 	const useSetTheme = (e) => { setTheme( e.matches ? 'dark' : 'light' ) }
 
-		const watchSysTheme = window.matchMedia('(prefers-color-scheme: dark)')
+	// 	const watchSysTheme = window.matchMedia('(prefers-color-scheme: dark)')
 
-		watchSysTheme.addEventListener( 'change', useSetTheme )
+	// 	watchSysTheme.addEventListener( 'change', useSetTheme )
 
-		return () => {
-			watchSysTheme.removeEventListener( 'change', useSetTheme )
-		}
-	}, [theme] )
+	// 	return () => {
+	// 		watchSysTheme.removeEventListener( 'change', useSetTheme )
+	// 	}
+	// }, [theme] )
 
 	useEffect( () => {
 		class RouteEvents {

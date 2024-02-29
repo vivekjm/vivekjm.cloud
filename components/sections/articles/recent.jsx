@@ -14,8 +14,8 @@ export default function Recent({ mediumArticles }) {
 	const articles 	= mediumArticles.items
 
 	return (
-		<Section classProp="borderBottom">
-			<Container spacing={'verticalXXXXLrg'}>
+	  <Section classProp={css.section}>
+      <Container classProp={css.container} spacing={"verticalXXXLrg"}>
 				<SectionTitle
 					title="Recent Articles"
 					preTitle="Informative"
