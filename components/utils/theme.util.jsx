@@ -10,7 +10,7 @@ export default function SetTheme() {
 	const router = useRouter()
 
 	const [ route, wasRoute ] = useState()
-	const [ theme, setTheme ] = useState('light')
+	const [ theme, setTheme ] = useState()
 
 
 
@@ -24,30 +24,30 @@ export default function SetTheme() {
 		}
 	}
 
-	// const defaultTheme = () => {
-	// 	const themeLocalStorage = localStorage.getItem('theme')
-	// 	const themeSystem       = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
+	const defaultTheme = () => {
+		const themeLocalStorage = localStorage.getItem('theme')
+		const themeSystem       = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'light'
 
-	// 	return ( 'light')
-	// }
+		return ( 'light')
+	}
 
-	// useEffect( () => {
+	useEffect( () => {
 
-	// 	if ( ! theme ) return setTheme( defaultTheme() )
+		if ( ! theme ) return setTheme( defaultTheme() )
 
-	// 	document.querySelector(':root').dataset.theme = ( theme )
-	// 	localStorage.setItem( 'theme', ( theme ) )
+		document.querySelector(':root').dataset.theme = ( theme )
+		localStorage.setItem( 'theme', ( theme ) )
 		
-	// 	const useSetTheme = (e) => { setTheme( e.matches ? 'dark' : 'light' ) }
+		const useSetTheme = (e) => { setTheme( e.matches ? 'light' : 'light' ) }
 
-	// 	const watchSysTheme = window.matchMedia('(prefers-color-scheme: dark)')
+		const watchSysTheme = window.matchMedia('(prefers-color-scheme: light)')
 
-	// 	watchSysTheme.addEventListener( 'change', useSetTheme )
+		watchSysTheme.addEventListener( 'change', useSetTheme )
 
-	// 	return () => {
-	// 		watchSysTheme.removeEventListener( 'change', useSetTheme )
-	// 	}
-	// }, [theme] )
+		return () => {
+			watchSysTheme.removeEventListener( 'change', useSetTheme )
+		}
+	}, [theme] )
 
 	useEffect( () => {
 		class RouteEvents {
@@ -97,7 +97,7 @@ export default function SetTheme() {
 			<Script id="theme.util.jsx" strategy="beforeInteractive" >
 				{`
 				let themeLocalStorage = localStorage.getItem('theme')
-				let themeSystem       = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
+				let themeSystem       = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'light'
 				document.querySelector(':root').dataset.theme = themeLocalStorage ?? themeSystem
 				`}
 			</Script>
