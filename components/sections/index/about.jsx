@@ -72,7 +72,7 @@ const methods 	= [
 	{ key: 'window', 			name: 'Design Systems', 	type: 'fab' },
 	{ key: 'cubes', 			name: 'Product Strategy', 	type: 'fab' },
 	{ key: 'layer-plus', 		name: 'Brand Strategy', 	type: 'fab' },
-	{ key: 'maya', 		name: 'Operations', 		type: 'devicon' },
+	{ key: 'maya', 		name: 'Operations', 		type: 'fab' },
 ]
 
 
