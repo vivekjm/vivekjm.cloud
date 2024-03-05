@@ -74,43 +74,33 @@ export default function Hero() {
         </section>
         <section>
           <button
-            className={`button ${button.primary}`}
+            className={`button ${button.primary} leaveSite`}
             onClick={() => (window.location = "mailto:vivekjm77@gmail.com")}
           >
             {content.buttons.primary.title}
           </button>
           <button
             className={`button ${button.secondary} leaveSite`}
-            onClick={() =>
-              window.open("https://www.linkedin.com/in/vivek-jm/", "_blank")
-            }
-          >
-            {content.buttons.secondary.title}
+          onClick={ ()=> window.open("https://medium.com/@vivekjm77", "_blank") } >
+          Medium  &#0;  &#0;  &#0;
           </button>
-          {/* <button className={`button ${button.secondary} leaveSite`}
-							onClick={ ()=> window.open("https://medium.com/@vivekjm77/", "_blank") } >
-						Medium
-					</button> */}
+        
         </section>
-		  <section>
+
+		 <div style={{ marginTop: '10px' }}></div>
+
+        <section>
           <button
-            className={`button ${button.primary}`}
-            onClick={() => (window.location = "mailto:vivekjm77@gmail.com")}
-          >
-            {content.buttons.primary.title}
+            className={`button ${button.secondary} leaveSite`}
+            onClick={ ()=> window.open("https://github.com/vivekjm/", "_blank") } >
+         &#0;&#0; Github &#0;  &#0;  &#0;
           </button>
           <button
             className={`button ${button.secondary} leaveSite`}
-            onClick={() =>
-              window.open("https://www.linkedin.com/in/vivek-jm/", "_blank")
-            }
-          >
-            {content.buttons.secondary.title}
+           onClick={ ()=> window.open("https://www.linkedin.com/in/vivek-jm/", "_blank") } >
+           Linked In
           </button>
-          {/* <button className={`button ${button.secondary} leaveSite`}
-							onClick={ ()=> window.open("https://medium.com/@vivekjm77/", "_blank") } >
-						Medium
-					</button> */}
+        
         </section>
       </Container>
       <HeroBg theme="bg-color-1" />

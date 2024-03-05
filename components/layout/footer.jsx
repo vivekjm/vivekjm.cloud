@@ -31,7 +31,7 @@ export default function Footer() {
 	return (
 		<footer className={css.container}>
 			<Container spacing={['verticalXXLrg', 'bottomLrg']}>
-				<section className={css.sections}>
+				{/* <section className={css.sections}>
 					<ul className={css.thanks}>
 						<li><h4>Acknowledgments</h4></li>
 						{
@@ -70,18 +70,18 @@ export default function Footer() {
 							}
 						</li>
 					</ul>
-				</section>
+				</section> */}
 				<section className={css.github}>
 					<a href={settings.portfolio.repo_html} rel="noreferrer" target="_blank">
 						<h5>{settings.portfolio.forkthis}</h5>
-						<ul>
+						{/* <ul>
 							<li>
 								<p><Icon icon={[ 'fad', 'code-branch' ]} /> Forks: { gitHubInfo.forks }</p>
 							</li>
 							<li>
 								<p><Icon icon={[ 'fad', 'star' ]} /> Stars: { gitHubInfo.stars }</p>
 							</li>
-						</ul>
+						</ul> */}
 					</a>
 				</section>
 			</Container>
